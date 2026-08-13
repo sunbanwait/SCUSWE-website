@@ -1,0 +1,58 @@
+function About() {
+  return (
+    <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 md:py-24">
+      {/* Hero Section */}
+      <div className="text-center mb-20 animate-fade-in-up">
+        <h1 className="font-poppins font-extrabold text-5xl md:text-7xl text-text-eggplant mb-6 tracking-tight">
+          About SWE
+        </h1>
+        <div className="w-24 h-1.5 bg-accent-purple mx-auto rounded-full mb-8"></div>
+      </div>
+
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+        
+        {/* Text Content */}
+        <div className="space-y-6 order-2 lg:order-1 text-lg md:text-xl text-text-eggplant font-medium leading-loose">
+          <p>
+            The Society of Women Engineers (SWE) is the world’s largest advocate and catalyst for change for women in engineering and technology.
+          </p>
+          <p>
+            To ensure SWE members reach their full potential as engineers and leaders, the Society offers unique opportunities to network, provides professional development and shapes public policy.
+          </p>
+          <p>
+            SWE champions the value of diversity. We inspire young girls to become engineers and support them with scholarships in order to expand the engineering profession’s ability to improve the quality of life for billions of people worldwide.
+          </p>
+        </div>
+
+        {/* Core Values Image Area */}
+        <div className="order-1 lg:order-2 relative group">
+          {/* Decorative Background */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-accent-purple to-bg-lavender rounded-[3rem] transform rotate-3 scale-105 opacity-50 transition-transform duration-500"></div>
+          <div className="relative z-10 bg-primary-white p-4 rounded-[3rem] shadow-2xl border border-white">
+            <img 
+              src="/assets/swecorevalues.png" 
+              alt="SWE Core Values" 
+              className="w-full h-auto rounded-[2rem] object-cover"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      {/* Call to action */}
+      <div className="bg-bg-lavender rounded-[3rem] p-12 text-center max-w-4xl mx-auto shadow-sm border border-purple-100">
+        <h3 className="font-poppins font-bold text-3xl text-text-eggplant mb-4">Join Our Community</h3>
+        <p className="text-text-eggplant font-medium text-lg mb-8 max-w-2xl mx-auto ">
+          Be a part of a supportive network that advocates for women in STEM, providing the resources and encouragement needed to succeed.
+        </p>
+        <a href="https://scuswe.us13.list-manage.com/subscribe?u=3da2baff5f14b838a717f5192&id=e46bfc1821" target="_blank" rel="noopener noreferrer" className="inline-block bg-accent-purple text-text-eggplant font-bold text-lg px-8 py-4 rounded-full shadow-lg shadow-purple-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          Subscribe to Newsletter
+        </a>
+      </div>
+
+    </div>
+  );
+}
+
+export default About;

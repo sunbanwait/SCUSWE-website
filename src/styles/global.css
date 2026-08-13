@@ -22,3 +22,17 @@
   --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
   --font-epilogue: 'Epilogue', sans-serif;
 }
+
+/* CSS Animation for infinite horizontal scrolling carousel */
+@keyframes carousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.5rem)); } /* -50% shifts by half the container, -0.5rem precisely accounts for the middle gap */
+}
+
+.animate-carousel {
+  animation: carousel 100s linear infinite;
+}
+
+.animate-carousel:hover {
+  animation-play-state: paused;
+}
