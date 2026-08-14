@@ -6,12 +6,12 @@ function About() {
         <h1 className="font-poppins font-extrabold text-5xl md:text-7xl text-text-eggplant mb-6 tracking-tight">
           About SWE
         </h1>
-        <div className="w-24 h-1.5 bg-accent-purple mx-auto rounded-full mb-8"></div>
+        <div className="w-48 h-1.5 bg-accent-purple mx-auto rounded-full mb-8"></div>
       </div>
 
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-        
+
         {/* Text Content */}
         <div className="space-y-6 order-2 lg:order-1 text-lg md:text-xl text-text-eggplant font-medium leading-loose">
           <p>
@@ -30,9 +30,9 @@ function About() {
           {/* Decorative Background */}
           <div className="absolute inset-0 bg-gradient-to-tr from-accent-purple to-bg-lavender rounded-[3rem] transform rotate-3 scale-105 opacity-50 transition-transform duration-500"></div>
           <div className="relative z-10 bg-primary-white p-4 rounded-[3rem] shadow-2xl border border-white">
-            <img 
-              src="/assets/swecorevalues.png" 
-              alt="SWE Core Values" 
+            <img
+              src="/assets/swecorevalues.png"
+              alt="SWE Core Values"
               className="w-full h-auto rounded-[2rem] object-cover"
             />
           </div>

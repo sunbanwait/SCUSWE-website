@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Layout({ children }) {
   const location = useLocation();
   const currentPath = location.pathname;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-primary-white font-sans text-text-eggplant font-bold antialiased overflow-x-hidden">
@@ -12,11 +14,27 @@ function Layout({ children }) {
           <div className="flex justify-between items-center h-20">
             {/* Logo & Title */}
             <div className="flex items-center gap-4">
-              <Link to="/" className="flex items-center group">
+              <Link to="/" className="flex items-center group" onClick={() => setIsMobileMenuOpen(false)}>
                 <span className="font-poppins font-bold text-xl md:text-2xl text-[#F8F9FA] tracking-wide group-hover:text-primary-white transition-colors">
                   SCU SWE
                 </span>
               </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-[#F8F9FA] hover:text-primary-white focus:outline-none"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {isMobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
             </div>
 
             {/* Desktop Navigation */}
@@ -71,6 +89,61 @@ function Layout({ children }) {
             </div>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-accent-purple border-t border-black/10 absolute w-full left-0 top-20 shadow-lg z-50">
+            <div className="flex flex-col px-6 py-4 space-y-4">
+              <Link
+                to="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`font-bold text-lg transition-colors ${currentPath === '/' ? 'text-primary-white' : 'text-primary-white/70 hover:text-primary-white'}`}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`font-bold text-lg transition-colors ${currentPath === '/about' ? 'text-primary-white' : 'text-primary-white/70 hover:text-primary-white'}`}
+              >
+                About
+              </Link>
+              <Link
+                to="/board"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`font-bold text-lg transition-colors ${currentPath === '/board' ? 'text-primary-white' : 'text-primary-white/70 hover:text-primary-white'}`}
+              >
+                Board
+              </Link>
+              <a
+                href="https://scuswe.us13.list-manage.com/subscribe?u=3da2baff5f14b838a717f5192&id=e46bfc1821"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="font-bold text-lg text-primary-white/70 hover:text-primary-white transition-colors"
+              >
+                Newsletter
+              </a>
+              <div className="flex flex-col space-y-2 pt-2 border-t border-white/10">
+                <span className="font-bold text-lg text-primary-white/70">Support SWE</span>
+                <Link
+                  to="/support-swe/sponsorship"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="pl-4 font-bold text-base text-primary-white/70 hover:text-primary-white transition-colors"
+                >
+                  Sponsorship
+                </Link>
+                <Link
+                  to="/support-swe/donate"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="pl-4 font-bold text-base text-primary-white/70 hover:text-primary-white transition-colors"
+                >
+                  Donate
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       <main className="flex-grow">
