@@ -10,8 +10,8 @@ function Home() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-block relative bg-primary-white border-8 border-nav-periwinkle px-8 pt-8 pb-4 rounded-[2.5rem] shadow-lg mb-10 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-            <h1 className="font-epilogue font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap text-text-eggplant tracking-tight leading-[1.1] relative z-10 text-center">
+          <div className="inline-block relative w-[95%] sm:w-auto bg-primary-white border-8 border-nav-periwinkle px-2 py-4 sm:px-8 sm:py-6 rounded-[2.5rem] shadow-lg mb-10 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+            <h1 className="font-epilogue font-black text-[4.8vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl whitespace-nowrap text-text-eggplant tracking-tight leading-[1.1] relative z-10 text-center">
               SWE at Santa Clara University
             </h1>
           </div>
