@@ -38,7 +38,7 @@ function Home() {
           </div>
           <div className="w-96 flex-shrink-0 bg-[#Fdfdfd] p-4 pb-16 shadow-xl border border-gray-200 rounded-sm">
             <div className="w-full h-[18.75rem] overflow-hidden rounded-sm shadow-inner">
-              <img src="/assets/sweboard.png" alt="SWE Event" className="w-full h-full object-cover object-[50%_75%] transform scale-125 origin-[50%_75%]" />
+              <img src="/assets/sweboard2.png" alt="SWE Event" className="w-full h-full object-cover object-[50%_75%] transform scale-125 origin-[50%_75%]" />
             </div>
           </div>
           <div className="w-96 flex-shrink-0 bg-[#Fdfdfd] p-4 pb-16 shadow-xl border border-gray-200 rounded-sm">
@@ -69,7 +69,7 @@ function Home() {
           </div>
           <div className="w-96 flex-shrink-0 bg-[#Fdfdfd] p-4 pb-16 shadow-xl border border-gray-200 rounded-sm">
             <div className="w-full h-[18.75rem] overflow-hidden rounded-sm shadow-inner">
-              <img src="/assets/sweboard.png" alt="SWE Event" className="w-full h-full object-cover object-[50%_75%] transform scale-125 origin-[50%_75%]" />
+              <img src="/assets/sweboard2.png" alt="SWE Event" className="w-full h-full object-cover object-[50%_75%] transform scale-125 origin-[50%_75%]" />
             </div>
           </div>
           <div className="w-96 flex-shrink-0 bg-[#Fdfdfd] p-4 pb-16 shadow-xl border border-gray-200 rounded-sm">
